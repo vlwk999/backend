@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#bln1{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 116px;
+    height: 160px;
+    border-radius: 50px;
+        background: url(./img/bg-main1.png) no-repeat 0% 0%;
+    animation:myani 1s infinite alternate
+    /* forwards 도착지점에서 끝냄 */
+}
+
+@keyframes myani{
+    0%{top: 100px;}
+    100%{top: 700px;}
+}
+#bln2{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  
+    background: url(./img/bg-main1.png) no-repeat 50% 50%;
+    animation:myani2 2s infinite alternate;
+    /* forwards 도착지점에서 끝냄 */
+
+}
+
+@keyframes myani2{
+    0%{top: 10px;}
+    100%{top: 500px;}
+}
+
+
+</style>
+</head>
+<body>
+    <div id="bln1"></div>
+    <div id="bln2"></div>
+    
+</body>
+</html>

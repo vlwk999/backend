@@ -1,0 +1,100 @@
+*{margin: 0;padding: 0;}
+.wrap{
+    width: 830px;
+    height: 310px;
+    border: 1px solid red;
+    /* margin: 0 auto; */
+    margin: 100px auto 0;
+    position: relative;
+}
+.box{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    display: none;
+}
+.box img{
+    display: block;
+}
+
+.box1{
+    display: block;
+    left: 0; top: 0;
+    /* width: 200px;
+    height: 150px;
+    position: absolute; */
+}
+.box2{
+    display: block;
+    left: 0; top: 160px;
+    /* width: 200px;
+    height: 150px;
+    position: absolute;
+     */
+}
+.box3{
+    display: block;
+    width: 200px;
+    height: 310px;
+    left: 210px;
+    /* bottom: 0px; */
+    top: 0;
+    
+}
+.box4{
+    display: block;
+    /* width: 115px;
+    position: absolute; */
+    left: 420px;
+    top: 0;
+}
+.box5{
+    display: block;
+    right: 0;
+    top: 0;
+}
+.box6{
+    width: 410px;
+    display: block;
+    right: 0;
+    height: 150px;
+    top: 160px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,255,0.5);
+    transition: all 0.5s;
+}
+.box:hover::before{
+    width: 100%;
+}
+.box6:hover::before{
+    height:  100%;
+}
+
+.box6::before{
+    width: 100%;
+    height: 0%;
+}
+.box p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* border, padding 포함 100% */
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+    opacity: 0;
+    background: url(images/more.png) no-repeat 50% 80%;
+    font-size: 13px;
+}
+.box:hover p{ opacity: 1;}

@@ -1,0 +1,116 @@
+*{margin: 0;padding: 0;}
+.bigbox{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px dotted #333;
+    margin: 100px auto 0;
+}
+
+.face{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color:rgb(131, 195, 231);
+    bottom: 0;
+    border: 5px solid #333;
+    box-sizing: border-box;   
+}
+
+.eyeball{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 150%;
+    background-color: #000;
+    position: absolute;
+    top: 190px;
+}
+.eyeball.left{left: 60px;}
+.eyeball.right{right: 60px;}
+
+.nose{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #000;
+    top: 260px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+}
+.mouth{
+    width: 130px;
+    height: 110px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 60%;
+    position: absolute;
+    background-color: #fff;
+    top: 300px;
+}
+.mouth.left{
+    left: 235px;
+    transform: rotate(60deg);
+   
+}
+.mouth.right{
+    right: 215px;
+    transform: rotate(-240deg);
+   
+}
+
+.line{
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #333;
+    
+    left: 90px;
+}
+.line1{
+    transform-origin: left center;
+    transform: rotate(15deg);
+}
+.line2{
+    top: 60px;
+    transform: rotate(0deg);
+}
+.line3{
+    top: 120px;
+    transform-origin: left center;
+    transform: rotate(-15deg);
+}
+.lf_line{
+    position: absolute;
+    bottom: 200px;
+}
+.line1{
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #333;
+   
+    right:90px;
+}
+.line4{
+    top: 290px;
+    transform-origin: right center;
+    transform: rotate(-15deg);
+}
+.line5{
+    top: 350px;
+    transform: rotate(0deg);
+}
+.line6{
+    top: 410px;
+    transform-origin: right center;
+    transform: rotate(15deg);
+}
+.rg_line{
+    position: absolute;
+    bottom: 150px;
+}
