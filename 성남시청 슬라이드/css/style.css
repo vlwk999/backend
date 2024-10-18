@@ -1,0 +1,67 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333}
+.banner{width: 835px; height: 470px; margin: 100px auto;}
+.main_visual{width: 100%; 
+    height: 100%; 
+    position: relative; 
+    left: 0;
+    overflow: hidden;
+}
+.main_visual_img{position: absolute; width: 6000px; left: 0%;height:420px;}
+.main_visual_img.animate{
+    transition: left .3s ease-in;
+}
+.main_visual_img li{ float: left; }
+
+.down{
+    position: absolute;
+    width:100%;
+    height:50px;
+    background-color: bisque;
+    bottom: 0;
+}
+.down > div{float: left;
+    padding-left:20px ;padding-top:10px;}
+.over-btn span{   
+    float:left;
+}
+.over-btn .prev a{
+    display: block;
+    width:30px;
+    height:30px;
+    background: url(../images/notice_bn_prev.png) no-repeat;
+    text-indent: -9999px;
+}
+.stop_btn a{
+    display: inline-block;
+}
+.over-btn .next a{
+    display: block;
+    margin-left: 3px;
+    width:30px;
+    height:30px;
+    background: url(../images/notice_bn_next.png) no-repeat;
+    text-indent: -9999px;
+}
+.indicator{
+    position: absolute;
+    bottom: 10%;
+    right:10%;
+    overflow: hidden;
+}
+.indicator li{
+    /*  float: left; */
+     margin: 0 5px;
+     width: 15px;
+     height: 15px;
+     background: #fff;
+     border-radius: 50%;
+     display: inline-block;
+     cursor: pointer;
+     text-indent: -99999em;
+     
+ }
+ .indicator li.active{
+    background-color: orange;
+ }
