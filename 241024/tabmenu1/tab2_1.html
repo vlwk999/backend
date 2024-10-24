@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+.tab{display: flex; list-style: none; height: 40px; text-align: center;}
+.tab li{width: 70px; line-height: 40px;}
+.tab li.on{background-color: red; font-weight: bold; color: #fff;}
+
+.tab_list{width: 280px; height: 200px; border: 1px solid #333;}
+.tab_list div {display: none; text-align: center;}
+.tab_list div.on{display: block;}
+</style>
+<script>
+    $(function(){
+        $('.tab li').click(function(){
+            var i =$(this).index(); //클릭한 인덱스 번호를 변수 i에 대입(반환)
+            // alert(i);
+            $('.tab li').removeClass('on');
+            $('.tab li').eq(i).addClass('on');
+            $('.tab_list div').removeClass('on');
+            $('.tab_list div').eq(i).addClass('on');
+        });
+    });
+</script>
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">공지사항</li>
+        <li>갤러리</li>
+        <li>정보마당</li>
+    </ul>
+    <div class="tab_list">
+        <div class="on">
+            <p>공지사항입니다.</p>
+            <p>공지사항입니다.</p>
+            <p>공지사항입니다.</p>
+        </div>
+        <div><p>갤러리입니다.</p>
+             <p>갤러리입니다.</p>
+             <p>갤러리입니다.</p>
+        </div>
+        <div><p>정보마당입니다.</p>
+             <p>정보마당입니다.</p>
+             <p>정보마당입니다.</p>
+        </div>
+    </div>
+    </div>
+
+
+    
+</body>
+</html>
