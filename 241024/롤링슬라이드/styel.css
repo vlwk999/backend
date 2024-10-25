@@ -1,0 +1,30 @@
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+.cf:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+#wrap{
+    width: 60%;
+    margin: 50px auto;
+    position: relative;
+    border: 5px solid red;
+}
+#wrap .slide{
+    width: 100%;
+    /* overflow: hidden; */
+}
+.slide .imgs{
+    width: 600%;
+}
+.slide .img li{
+    width: 16.66%;
+    float: left;
+}
+.slide .imgs li img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
