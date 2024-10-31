@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+<style>
+*{margin: 0; padding: 0;}
+    header{
+        width: 960px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: darkseagreen;
+    }
+    section{
+        width: 960px;
+        height: 800px;
+        margin: 0 auto;
+        border: 1px solid darkgreen;
+    }
+</style>
+<Script>
+$(function(){
+//bxSlider 는 pager와 화살표가 기본으로 표시된다.
+//화살표가 보이지 않을시
+//css/jquery.bxslider.css를 열어서
+//images/로 시작하는 부분을 찾아서 ../images로 변경하기
+
+    $('.bx3').bxSlider({
+        auto : true,
+       
+    });
+
+
+
+
+
+});
+</Script>
+</head>
+<body>
+    <header>헤더</header>
+    <section>
+
+        <ul class="bx3">
+            <li><img src="img/images(1).jpg" alt=""></li>
+            <li><img src="img/images(2).jpg" alt=""></li>
+            <li><img src="img/images(3).jpg" alt=""></li>
+            <li><img src="img/images(4).jpg" alt=""></li>
+            <li><img src="img/images(5).jpg" alt=""></li>
+        </ul>
+    </section>
+    
+</body>
+</html>
