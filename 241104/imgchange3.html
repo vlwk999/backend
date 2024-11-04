@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+</style>
+</head>
+<body>
+    <!--html안에 javascript 삽입-->
+    <ul class="gnb">
+        <li>
+            <a href="#">
+                <img src="images/menu01_out.png"alt="">
+
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu02_out.png"alt="">
+
+            </a>
+        </li>        <li>
+            <a href="#">
+                <img src="images/menu03_out.png"alt="">
+
+            </a>
+        </li>        <li>
+            <a href="#">
+                <img src="images/menu04_out.png"alt="">
+
+            </a>
+        </li> 
+        
+    </ul>
+<script>
+var links = document.querySelectorAll('.gnb li a');
+links.forEach(function(link){
+    link.addEventListener('mouseover',function(){
+        //마우스를 올렸을때
+        var img = link.querySelector('img');
+        img.src = img.src.replace('out','over');
+    });
+
+    link.addEventListener('mouseleave',function(){
+        //마우스를 내렸을때
+        var img = link.querySelector('img');
+        img.src = img.src.replace('over','out');
+    });
+});
+</script>
+</body>
+</html>
