@@ -40,4 +40,14 @@ $(function(){
  
      });
      
+    $('.specialHall_list li').mouseenter(function(){
+       var i =  $(this).index();
+       //alert(i);
+       $('.specialHall_list li').removeClass('on');
+       $('.specialHall_list li').eq(i).addClass('on');
+       $('.tapContent a').removeClass('on');
+       $('.tapContent a').eq(i).addClass('on');
+     });
+ 
+ 
  });
