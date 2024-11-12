@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// 자바스크립트의 map() 함수는 배열의 각 요소에 대해 제공된 함수를 호출하여 
+// 새로운 배열을 반환하는 함수입니다. map()은 원본 배열을 수정하지 않고, 
+// 기존 배열의 요소를 가공한 새로운 배열을 생성하는 데 유용합니다.
+
+
+// 기본 문법
+// const newArray = (callback(element, index, array), thisArg);
+// callback: 배열의 각 요소에 대해 실행할 함수
+// element: 처리할 현재 요소
+// index (선택 사항): 현재 요소의 인덱스
+// array (선택 사항): map이 호출된 배열 자체
+// thisArg (선택 사항): callback 함수 내부에서 this로 사용할 값
+
+//1.배열의 모든 요소에 2를 곱하기
+const numbers = [1,2,3,4,5];
+const doubled = numbers.map(number => number *2);
+console.log(doubled); // [ 2,4,6,8,10 ]
+
+//2.객체 배열에서 특정속성만 추출하기
+const users =[
+    {id:1, name:"Alicke"},
+    {id:2, name:"Bob"},
+    {id:3, name:"Jimin"},
+];
+const names = users.map(user => user.name);
+console.log(names);
+//3. 배열의 각 요소에 인덱스를 함께 사용하기
+const nums = [10,20,30];
+const widthIndex = nums.map((number, index)=>`Index ${index} : ${number}`);
+console.log(widthIndex);
+
+// 예제 4: 문자열 배열을 대문자로 변환하기
+// 문자열 배열에서 모든 문자열을 대문자로 변환하는 예제입니다.
+
+const words = ["hello", "world", "javascript"];
+const uppercased = (word => word.toUpperCase());
+
+console.log(uppercased); // ["HELLO", "WORLD", "JAVASCRIPT"]
+
+// 예제 5: 조건부 가공
+// 배열 요소의 값에 조건을 적용해 새로운 배열을 생성할 수도 있습니다.
+
+const number = [1, 2, 3, 4, 5];
+const evenOrOdd = (number => (number % 2 === 0 ? "Even" : "Odd"));
+
+console.log(evenOrOdd); // ["Odd", "Even", "Odd", "Even", "Odd"]
+
+// 예제 6: 중첩된 배열 평탄화 (2차원 배열을 1차원으로 변환)
+// map과 concat을 조합해 2차원 배열을 1차원으로 평탄화할 수 있습니다.
+
+const nestedArray = [[1, 2], [3, 4], [5, 6]];
+const flatArray = nestedArray.map(arr => arr).flat();
+
+console.log(flatArray); // [1, 2, 3, 4, 5, 6]
+</script>
+</head>
+<body>
+    
+</body>
+</html>

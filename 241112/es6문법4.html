@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//중첩된 객체해체
+const user = {
+    username:"Jone doe",
+    adress: {
+        city:"New York",
+        zip:"12767"
+    }
+};
+//중첨된 개체 해체
+const {username, adress:{city,zip}} = user;
+console.log(username); //jone doe
+console.log(city); // new york
+console.log(zip); // 12767
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
