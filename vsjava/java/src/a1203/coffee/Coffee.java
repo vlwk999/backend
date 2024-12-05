@@ -17,9 +17,9 @@ public class Coffee {
         return instance;
     }
 
-    ArrayList<String> coffeeList; //커피의 종류
-    ArrayList<Integer> coffeePrice; //커피의 가격
-    Map<String, Integer> menu; //menu [커피종류, 커피가격]
+    ArrayList<String> coffeeList; //커피의 종류 ex) [아메리카노, 카푸치노]
+    ArrayList<Integer> coffeePrice; //커피의 가격 [2000,45000]
+    Map<String, Integer> menu; //menu [커피종류, 커피가격] [아메리카노,2000]
     
     public void getMenu(){
         menu = new LinkedHashMap<String, Integer>();//순서가 있는 Map
@@ -47,9 +47,9 @@ public class Coffee {
         DecimalFormat f = new DecimalFormat("0,000원");
         StringBuffer st = new StringBuffer();
         st.append("\n\n")
-            .append("+---------------------------------------------------+\n")
-            .append("+------------------------메뉴판----------------------+\n")
-            .append("|            Menu                   price           |\n");
+            .append("+------------------------------------------------------+\n")
+            .append("+------------------------메뉴판------------------------+\n")
+            .append("|            Menu                        price         |\n");
         System.out.println(st.toString());
         int s = 1;
         for(Entry<String, Integer> get : menu.entrySet()){
@@ -57,7 +57,7 @@ public class Coffee {
             , s, get.getKey(), f.format(get.getValue()));
             s++;
         } 
-        System.out.println("+-------------------------------------------------+\n");
+        System.out.println("+------------------------------------------------------+\n");
     }
 
 }
