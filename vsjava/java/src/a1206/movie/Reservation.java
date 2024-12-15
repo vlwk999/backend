@@ -115,5 +115,9 @@ public class Reservation {
         br.close(); //입력 흐름 해제
         return r;
     }
+    public boolean isCancelled() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isCancelled'");
+    }
 
 }
