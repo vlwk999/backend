@@ -12,29 +12,34 @@ public class Admin {
         String password = sc.nextLine();
         return password.equals(ADMIN_PASSWORD);
     }
-
+    // 실시간 판매 티켓 수 보기
     public static void viewSoldTickets() {
         System.out.println("현재 판매된 티켓 수: " + soldTickets);
     }
-
+    // 남은좌석 현황보기
     public static void showSeatStatus() {
         Seat.showSeats(); // 좌석 현황 표시
     }
 
+    // 예약 취소
     public static void cancelReservation() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("취소할 좌석을 입력하세요: ");
-        String seat = sc.nextLine();
+        System.out.print("취소할 예매번호를 입력하세요: ");
+        String bookingNumber = sc.nextLine();
 
-        if (Reservation.isSeatReserved(seat)) {
-            Reservation.cancelReservation(seat); //좌석 예약 취소
+        // 예매 번호로 해당 예약을 찾음
+        ReservationDetails reservation = Reservation.getReservationByBookingNumber(bookingNumber);
+
+        if (reservation != null) {
+            String seat = reservation.getSeat();
+            Reservation.cancelReservation(seat); // 좌석 예약 취소
             soldTickets--; // 예약 취소 시 티켓 수 감소
-            System.out.println("좌석 " + seat + "의 예약이 취소되었습니다.");
-            showSeatStatus(); // 좌석 상태 갱신 후 출력
+            System.out.println("예매번호 " + bookingNumber + "의 예약이 취소되었습니다.");
         } else {
-            System.out.println("해당 좌석은 예약되지 않았습니다.");
+            System.out.println("해당 예매번호는 존재하지 않습니다.");
         }
-    }
+}
+
 
     public static void showAdminMenu() {
         Scanner sc = new Scanner(System.in);

@@ -16,9 +16,9 @@ public class Seat {
     }
 
     public static void showSeats() {
-        System.out.println("----------------------------");
-        System.out.println("        S T A G E");
-        System.out.println("----------------------------");
+        System.out.println("---------------------------------------------------");
+        System.out.println("                     S T A G E                     ");
+        System.out.println("---------------------------------------------------");
 
         // 열 번호 출력 (1~24)
         System.out.print("     ");

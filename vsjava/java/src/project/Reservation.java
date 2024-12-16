@@ -23,8 +23,12 @@ public class Reservation {
 
     // 예매 내역 보기
     public static void viewReservations() {
-        for (ReservationDetails reservation : reservations) {
-            System.out.println(reservation);
+        if (reservations.isEmpty()) {
+            System.out.println("현재 예매내역이 없습니다.");
+        } else {
+            for (ReservationDetails reservation : reservations) {
+                System.out.println(reservation);
+            }
         }
     }
 
@@ -58,8 +62,6 @@ public class Reservation {
         } else {
             System.out.println("해당 좌석은 예약되지 않았습니다.");
         }
-
-       
     }
 }
 

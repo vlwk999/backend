@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         // 프로그램 시작 시 안내 메시지 출력
         System.out.println("*한승우 미니콘서트 예매 사이트에 오신 것을 환영합니다!*");
@@ -16,7 +16,7 @@ public class Main {
             System.out.println("3. 예매내역 확인하기");
             System.out.println("4. 관리자 메뉴");
             System.out.print("원하는 메뉴를 선택하세요 (1~4): ");
-            int menuChoice = Integer.parseInt(scanner.nextLine());
+            int menuChoice = Integer.parseInt(sc.nextLine());
 
             switch (menuChoice) {
                 case 1:
@@ -25,7 +25,7 @@ public class Main {
 
                     // 회원 로그인 및 예매
                     System.out.print("회원번호(8자리)를 입력하세요: ");
-                    String memberId = scanner.nextLine();
+                    String memberId = sc.nextLine();
 
                     // 회원번호 8자리 체크
                     if (memberId.length() != 8) {
@@ -34,7 +34,7 @@ public class Main {
                     }
                     
                     System.out.print("회원 이름을 입력하세요: ");
-                    String userName = scanner.nextLine();
+                    String userName = sc.nextLine();
 
                     Member member = new Member(memberId, userName);
                     boolean isFanClubMember = member.isFanClubMember();
@@ -52,7 +52,7 @@ public class Main {
                     // 좌석 상태 출력 및 예약
                     Seat.showSeats();
                     System.out.print("원하는 좌석을 입력하세요 (예: A1): ");
-                    String selectedSeat = scanner.nextLine();
+                    String selectedSeat = sc.nextLine();
 
                     boolean reserved = Seat.reserveSeat(selectedSeat);
 
@@ -68,9 +68,9 @@ public class Main {
                 case 2:
                     // 팬클럽회원 여부 조회
                     System.out.print("회원번호(8자리)를 입력하세요: ");
-                    String memberId1 = scanner.nextLine();
+                    String memberId1 = sc.nextLine();
                     System.out.print("회원 이름을 입력하세요: ");
-                    String userName1 = scanner.nextLine();
+                    String userName1 = sc.nextLine();
 
                     Member member1 = new Member(memberId1, userName1);
                     boolean isFanClubMember1 = member1.isFanClubMember();
@@ -87,19 +87,19 @@ public class Main {
                 case 3:
                     // 예매내역 확인하기
                     System.out.print("예매 번호를 입력하세요: ");
-                    String bookingNumber = scanner.nextLine();
+                    String bookingNumber = sc.nextLine();
                     ReservationDetails reservation = Reservation.getReservationByBookingNumber(bookingNumber);
                     if (reservation != null) {
                         System.out.println( " 예매 내역: " + reservation);
                     } else {
-                        System.out.println("해당 예매 번호가 존재하지 않습니다.");
+                        System.out.println("해당 예매 번호가 존재하지 않습니다."); 
                     }
                     break;
                     
                 case 4:
                     // 관리자 메뉴 접근
                     System.out.print("\n관리자 메뉴에 접근하려면 비밀번호가 필요합니다. "); // 안내 멘트 후 엔터키 누르기
-                    String password = scanner.nextLine();
+                    String password = sc.nextLine();
                     if (Admin.verifyPassword()) {
                         Admin.showAdminMenu();
                     } else {

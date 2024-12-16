@@ -2,7 +2,6 @@ package a1206.movie;
 
 import java.util.Scanner;
 
-import a1122.Final1;
 
 abstract class AbstractMenu implements Menu{
 //추상클래스
